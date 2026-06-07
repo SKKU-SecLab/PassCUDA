@@ -16,7 +16,7 @@ pip install -r requirements.txt
 
 ### Browser
 
-PASSCUDA uses [CloakBrowser](https://github.com/requirements-browser/cloakbrowser) to avoid passive bot detection that blocks standard Chromium instances.
+PASSCUDA uses [CloakBrowser](https://github.com/CloakHQ/cloakbrowser) to avoid passive bot detection that blocks standard Chromium instances.
 
 1. Download the CloakBrowser binary from the repository above.
 2. Download the **matching ChromeDriver version** for your CloakBrowser build. Version mismatches will cause the driver to fail at launch — check the CloakBrowser release notes for the exact Chromium version and download the corresponding ChromeDriver from [chromedriver.chromium.org](https://chromedriver.chromium.org/downloads).
