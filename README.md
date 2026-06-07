@@ -83,7 +83,7 @@ Implements the four sequential MLLM inference stages:
 - **Element Selection** — grounds the abstract action to a focused DOM candidate set collected by the Browser Wrapper. Handles chunked candidate lists for pages with many elements.
 - **Element Verification** (BBox Refinement + Click Point) — visually validates the selected element by iteratively refining its bounding box in a cropped screenshot, then determines the exact click coordinate before execution.
 
-Supports `vllm`, `openai`, and `gemini` providers via `VLMClient`.
+Supports `vllm` and `openai` providers via `VLMClient`.
 
 ---
 
