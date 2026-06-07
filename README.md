@@ -146,3 +146,15 @@ Renders the current action tree as a node graph. Can be run at any point during 
 | `output/tree/` | Action tree JSON, saved after each step |
 
 The `example/` directory contains a sample run on forbes.com using Qwen3.5-27B. Screenshots where the username or email address appears have been masked.
+
+
+## Results
+
+Success rates on PassCUDABench (100 sites). A run is counted as successful if the agent reaches the password change form within 50 steps.
+
+| Model         | Success Rate |
+|---------------|-------------|
+| GPT-5.1       | 93%         |
+| Qwen3.5-27B   | 92%         |
+
+Full results including per-category breakdowns and failure analysis are reported in the paper.
