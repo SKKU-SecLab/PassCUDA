@@ -118,9 +118,9 @@ Imports and reloads all components. Defines the `ExecContext` dataclass and the 
 | **`domain`** | Short identifier for the target site (used in file naming) |
 | **`home_url`** | Starting URL for the browser session |
 | **`rank`** | Rank identifier (used in file naming) |
-| **`PROVIDER`** | `"vllm"`, `"openai"`, or `"gemini"` |
+| **`PROVIDER`** | `"vllm"` or `"openai"` |
 | **`MODEL`** | Model string (e.g., `"Qwen/Qwen3.5-27B-FP8"`, `"gpt-5.1"`) |
-| **`BASE_URL`** | vLLM server endpoint, or `None` for OpenAI/Gemini |
+| **`BASE_URL`** | vLLM server endpoint, or `None` for OpenAI |
 | **`API_KEY`** | API key for the provider, or `"EMPTY"` for local vLLM |
 
 Output paths (`screenshot_path`, `bbox_dir`, `tree_dir`, `log_path`) are derived automatically from these values and created if they do not exist.
