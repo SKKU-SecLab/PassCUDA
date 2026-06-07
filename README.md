@@ -99,7 +99,7 @@ Run the Setup, Prompt Governor, Module, and Initialization sections before start
 
 ### Setup
 
-Sets environment variables (X display for headless environments) and temp directory. Adjust as needed for your server setup.
+Sets environment variables and temp directory. The browser runs in headed mode by default so you can observe the automation as it runs. If you are on a remote server without a physical display, set up an X virtual framebuffer (e.g., `Xvfb :1 -screen 0 1920x1080x24 &`) and point the `DISPLAY` environment variable at it before launching the notebook.
 
 ### Prompt Governor
 
