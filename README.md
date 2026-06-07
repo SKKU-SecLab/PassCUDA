@@ -2,7 +2,7 @@
 
 **Password Change URL Discovery Agent**
 
-PASSCUDA is an MLLM-based agent that automatically navigates to a website's password change page and records its URL, so password managers can direct users straight to it without manual navigation. See our paper for the full system description and benchmark results.
+PassCUDA is an MLLM-based agent that automatically navigates to a website's password change page and records its URL, so password managers can direct users straight to it without manual navigation. See our paper for the full system description and benchmark results.
 
 ---
 
@@ -16,7 +16,7 @@ pip install -r requirements.txt
 
 ### Browser
 
-PASSCUDA uses [CloakBrowser](https://github.com/CloakHQ/cloakbrowser) to avoid passive bot detection that blocks standard Chromium instances.
+PassCUDA uses [CloakBrowser](https://github.com/CloakHQ/cloakbrowser) to avoid passive bot detection that blocks standard Chromium instances.
 
 1. Download the CloakBrowser binary from the repository above.
 2. Download the **matching ChromeDriver version** for your CloakBrowser build. Version mismatches will cause the driver to fail at launch — check the CloakBrowser release notes for the exact Chromium version and download the corresponding ChromeDriver from [chromedriver.chromium.org](https://chromedriver.chromium.org/downloads).
@@ -31,7 +31,7 @@ CLOAK_BINARY       = "/path/to/cloakbrowser"   # ← and this
 
 ## Credentials
 
-Login credentials are loaded from `credentials.csv` at runtime by `credential_fetcher.py`. The MLLM never receives the actual credential values — PASSCUDA's Credential Fetcher injects them directly into the browser at execution time, so passwords are never exposed to the model.
+Login credentials are loaded from `credentials.csv` at runtime by `credential_fetcher.py`. The MLLM never receives the actual credential values — PassCUDA's Credential Fetcher injects them directly into the browser at execution time, so passwords are never exposed to the model.
 
 The CSV should follow this format:
 
