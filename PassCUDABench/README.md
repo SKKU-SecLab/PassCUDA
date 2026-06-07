@@ -54,15 +54,17 @@ Each step in `known_path` and `on_page_actions` has the following fields:
 - `optional`: whether this action may not be needed depending on the environment or account state. When `true`, the `condition` field describes the context in which it appears (e.g., `cookie_banner`, `ad_popup`, `first_login`). Note that the reverse also holds: traces were collected under specific account and region conditions, so additional actions not recorded here may appear in other environments, such as notification prompts, consent dialogs, or account-state warnings
 - `condition`: context in which an optional action appears. Values include `cookie_banner`, `user_consent`, `ad_popup`, `first_login`, `region_specific`, `2fa_email`, `2fa_sms`, `captcha`, and `anti_bot`. `null` for required steps
 
+Where `element_text` or `element_html` would contain the test account's username or email address, the value is replaced with `[username]` or `[user email]` respectively.
+
+
 ### Action types
 
 - `navigate`: direct URL navigation, not tied to a specific element
 - `click`: click on a button, link, or other interactive element
-- `type`: enter text into an input field. Credential fields contain placeholder strings (`email_retriever`, `password_retriever`, `2FA_retriever`) instead of actual values
-- `solve`: complete a CAPTCHA challenge
+- `type`: enter text into an input field
+- `CAPTCHA`: complete a CAPTCHA challenge
 - `scroll`: scroll the page to bring content into view
-- `select`: choose an option from a dropdown or list
-- `hover`: hover over an element to reveal a submenu or tooltip
+- `wait`: wait for a page load or action to complete
 
 
 ### difficulty_factors
